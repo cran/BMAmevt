@@ -51,6 +51,7 @@
   in \code{\link[coda]{heidel.diag}}.
 }
 \examples{
+\dontrun{
 data(Leeds)
 data(pb.Hpar)
 data(pb.MCpar)
@@ -67,6 +68,7 @@ MCpar=nl.MCpar)
 
 dim(pNL[1])
 pNL[-(1:3)]
+}
 }
 \seealso{
   \code{\link{posteriorMCMC}}

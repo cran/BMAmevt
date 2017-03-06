@@ -137,7 +137,9 @@ NULL
 ##' @keywords dataset
 NULL
 
-
+##' @importFrom grDevices dev.new gray
+##' 
+NULL
 
 
 

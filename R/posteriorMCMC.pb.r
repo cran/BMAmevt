@@ -20,6 +20,7 @@
 ##' with respect to the Heidelberger and Welch tests implemented in
 ##' \code{\link[coda]{heidel.diag}}.
 ##' @examples
+##' \dontrun{
 ##' data(Leeds)
 ##' data(pb.Hpar)
 ##' data(pb.MCpar)
@@ -36,6 +37,7 @@
 ##'
 ##' dim(pNL[1])
 ##' pNL[-(1:3)]
+##' }
 ##' @export
 posteriorMCMC.pb <-
   function(Nsim,
