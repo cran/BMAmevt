@@ -2,12 +2,11 @@ Package: BMAmevt
 Type: Package
 Title: Multivariate Extremes: Bayesian Estimation of the Spectral
         Measure
-Version: 1.0.3
-Date: 2019-06-09
-Author: Anne Sabourin
-Maintainer: Leo Belzile <belzilel@gmail.com>
+Version: 1.0.4
+Date: 2019-12-17
+Authors@R: c(person(given = "Leo", family = "Belzile", role = "cre", email = "belzilel@gmail.com", comment = c(ORCID = "0000-0002-9135-014X")), person(given = "Anne", family = "Sabourin", role = "aut", email = "anne.sabourin@telecom-paristech.fr", comment = c(ORCID = "0000-0002-5096-9157")))
 Depends: stats, utils, coda
-Description: Toolkit for Bayesian estimation of the dependence structure in multivariate extreme value parametric models.
+Description: Toolkit for Bayesian estimation of the dependence structure in multivariate extreme value parametric models, following Sabourin and Naveau (2014) <doi:10.1016/j.csda.2013.04.021> and Sabourin, Naveau and Fougeres (2013) <doi:10.1007/s10687-012-0163-0>.
 License: GPL (>= 2)
 LazyData: no
 NeedsCompilation: yes
@@ -29,6 +28,9 @@ Collate: 'BMAmevt-package.R' 'Laplace.evt.r' 'MCpriorIntFun.nl.r'
         'proposal.pb.r' 'rdirimix.r' 'rect.integrate.r' 'rnestlog.r'
         'rpairbeta.r' 'rstable.posit.R' 'scores3D.r' 'transf.to.rect.r'
         'wrapper.R' 'zzz.r'
-RoxygenNote: 6.1.1
-Packaged: 2019-06-09 14:53:17 UTC; leo
-Date/Publication: 2019-06-09 16:00:22 UTC
+RoxygenNote: 7.0.2
+Packaged: 2019-12-18 02:08:55 UTC; leo
+Author: Leo Belzile [cre] (<https://orcid.org/0000-0002-9135-014X>),
+  Anne Sabourin [aut] (<https://orcid.org/0000-0002-5096-9157>)
+Maintainer: Leo Belzile <belzilel@gmail.com>
+Date/Publication: 2019-12-18 22:40:10 UTC
