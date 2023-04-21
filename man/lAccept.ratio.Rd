@@ -2,7 +2,7 @@
 % Please edit documentation in R/lAccept.ratio.r
 \name{lAccept.ratio}
 \alias{lAccept.ratio}
-\title{Acceptance probability in the MC MC algorithm.}
+\title{Acceptance probability in the MCMC algorithm.}
 \usage{
 lAccept.ratio(
   cur.par,
@@ -22,7 +22,7 @@ lAccept.ratio(
 
 \item{prop.par}{The candidate parameter}
 
-\item{dat}{An angular data set, \emph{e.g.} constructed by
+\item{dat}{An angular data set, \emph{e.g.}, constructed by
 \code{\link{cons.angular.dat}}: A matrix which rows are the Cartesian coordinates of points on the unit simplex (summing to one).}
 
 \item{likelihood}{The likelihood function.
@@ -64,7 +64,7 @@ See \code{\link{prior.pb}} and \code{\link{prior.nl}} for templates.}
 \item{Hpar}{A list containing  Hyper-parameters to be passed to
 \code{prior}.}
 
-\item{MCpar}{A list containing  MC MC tuning parameters to be
+\item{MCpar}{A list containing  MCMC tuning parameters to be
 passed to \code{proposal}.}
 }
 \value{

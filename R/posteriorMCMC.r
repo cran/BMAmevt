@@ -1,10 +1,10 @@
 ##' Generates a posterior parameters sample, and computes the posterior  mean and component-wise variance on-line.
 ##'
-##' @title MC MC sampler for parametric spectral measures
+##' @title MCMC sampler for parametric spectral measures
 ##' @param Nsim Total number of iterations to perform.
 ##' @param Nbin Length of the burn-in period.
-##' @param par.start Starting point for the MC MC sampler.
-##' @param dat An angular data set, \emph{e.g.} constructed by
+##' @param par.start Starting point for the MCMC sampler.
+##' @param dat An angular data set, \emph{e.g.}, constructed by
 ##' \code{\link{cons.angular.dat}}: A matrix which rows are the Cartesian coordinates of points on the unit simplex (summing to one). 
 ##' @param likelihood The likelihood function.
 ##' Should be of type\cr
@@ -41,7 +41,7 @@
 ##' See \code{\link{prior.pb}} and \code{\link{prior.nl}} for templates.
 ##' @param Hpar A list containing  Hyper-parameters to be passed to
 ##' \code{prior}.
-##' @param MCpar A list containing  MC MC tuning parameters to be
+##' @param MCpar A list containing  MCMC tuning parameters to be
 ##' passed to \code{proposal}.
 ##' @param show.progress An vector of integers containing the times
 ##' (iteration numbers) at  which a message showing progression
@@ -188,6 +188,9 @@ posteriorMCMC <-
     emp.variance.unNorm=rep(0,leng)
 
     stored.vals <- matrix(0,nrow=Nsim-Nbin,ncol=leng)
+    if(!is.null(names(par.start)) & length(names(par.start)) == leng){
+     colnames(stored.vals) <- names(par.start)
+    }
     llh <- double(Nsim-Nbin)
     lprior <- double(Nsim-Nbin)
     stored.vals[1,]=cur.par
